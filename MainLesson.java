@@ -1,7 +1,9 @@
+
+
 public class MainLesson {
     public static void main(String[] args) {
 
-        char[] board = new char[999999999];
+        char[] board = new char[1000];
         board[0] = 'O';
         board[1] = 'O';
         board[2] = 'X';
@@ -11,9 +13,10 @@ public class MainLesson {
         board[6] = 'X';
         board[7] = 'O';
         board[8] = 'X';
-
-
-        //the Board right now
+        printboard(board) ;
+    }
+    static void printboard(char[]board) {
+            
         for (int i = 0; i < 3; i++) { 
         System.out.print("{");
         System.out.print(board[i]);
@@ -34,7 +37,5 @@ public class MainLesson {
         System.out.print("}");
         }
 
-        System.out.println();
-    }
-    
+        System.out.println();} 
 }
