@@ -18,7 +18,7 @@ public class choontong {
         while(turn!=10) {
         System.out.println("Enter a character character (value has to be a number) :");
         int data = scanner.nextInt();
-        
+        turn++;
         updateboard(board,--data);
         printboard(board);
         }
