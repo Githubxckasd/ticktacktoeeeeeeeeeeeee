@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class choontong {
     public static void main(String[] args){
+        int player = 1;
         Scanner scanner = new Scanner(System.in);
         int turn = 1;
         char[] board = new char[9];
@@ -19,17 +20,29 @@ public class choontong {
         System.out.println("Enter a character character (value has to be a number) :");
         int data = scanner.nextInt();
         turn++;
-        updateboard(board,--data);
+        updateboard(board,--data, turn%2);
         printboard(board);
         }
         scanner.close();
       
     }
-    static void updateboard(char[]board,int data) {
-    
-        
-    board[data] = 'x';
 
+    
+    
+    static void updateboard(char[]board,int data, int player) {
+    
+    
+    if (player == 1) {
+    board[data] = 'x';
+    } else {
+    board[data] = 'O';
+    }   
+
+
+
+
+
+    
     }
     static void printboard(char[]board) {
             
