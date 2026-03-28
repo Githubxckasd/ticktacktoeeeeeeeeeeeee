@@ -32,12 +32,12 @@ public class choontong {
     static void updateboard(char[]board,int data, int player) {
     
     
-    if (player == 1) {
+    if (player == 1 && board[data] == ' ') {
     board[data] = 'x';
-    } else {
+    } else if (player == 0 && board[data] == ' '){
     board[data] = 'O';
     }   
-
+    else {System.out.println(" invaild error");}
 
 
 
